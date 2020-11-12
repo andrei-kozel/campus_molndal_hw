@@ -12,6 +12,8 @@ namespace PensionApp
             int retirementAge = 66;
             int yearsToRetierment = retirementAge - age;
 
+            // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
+            // $ - string interpolation
             Console.WriteLine($"Du har {yearsToRetierment} år till pension");
 
             Console.WriteLine("Vill du spola fram tiden till pension? Svara [Ja] eller [Nej]:");
@@ -49,7 +51,7 @@ namespace PensionApp
                     while (age != storedAge )
                     {
                         age--;
-                        Console.WriteLine($"Du har {age} år gammal");
+                        Console.WriteLine($"Du är {age} år gammal");
                     }
                 }
             } else
@@ -57,10 +59,7 @@ namespace PensionApp
                 Console.WriteLine("Okej.");
             }
 
-            
-
             Console.WriteLine("Välkommen tillbaka!");
-
         }
     }
 }
