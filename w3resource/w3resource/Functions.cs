@@ -39,7 +39,6 @@ namespace w3resource
             Console.WriteLine("Raising ...");
             double result = raiseNumber(firstNumber, secondNumber);
             Console.WriteLine($"So, the number {firstNumber} ^ (to the power) {secondNumber} = {result}");
-
         }
 
         private double raiseNumber(int firstNumber, int secondNumber)
