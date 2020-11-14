@@ -23,7 +23,9 @@ namespace w3resource
 
             //basicAlgorithm.Exercise4();
 
-            conStatements.Exercise1();
+            //conStatements.Exercise1();
+            conStatements.Exercise7();
+            conStatements.Exercise8();
         }
     }
 }
