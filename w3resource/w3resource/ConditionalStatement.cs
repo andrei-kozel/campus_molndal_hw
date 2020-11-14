@@ -41,6 +41,26 @@ namespace w3resource
 
         public void Exercise8()
         {
+            Console.WriteLine("Write a C# Sharp program to find the largest of three numbers. ");
+            Console.WriteLine("Enter a first numer");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a second numer");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a third numer");
+            int c = Convert.ToInt32(Console.ReadLine());
+
+            if(a > c && a > b)
+            {
+                Console.WriteLine("The first number is the greatest among three.");
+            }
+            if (b > a && b>c)
+            {
+                Console.WriteLine("The second number is the greatest among three.");
+            }
+            if (c > b && c > a)
+            {
+                Console.WriteLine("The third number is the greatest among three.");
+            }
         }
     }
 }
