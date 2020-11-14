@@ -28,7 +28,7 @@ namespace w3resource
             //conStatements.Exercise7();
             //conStatements.Exercise8();
 
-            functions.Exercise6();
+            //functions.Exercise6();
             functions.Exercise7();
         }
     }
