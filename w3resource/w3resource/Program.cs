@@ -9,6 +9,7 @@ namespace w3resource
             Basic basic = new Basic();
             BasicAlgorithm basicAlgorithm = new BasicAlgorithm();
             ConditionalStatement conStatements = new ConditionalStatement();
+            Functions functions = new Functions();
 
             //basic.Exercise1();
             //basic.Exercise4();
@@ -25,7 +26,10 @@ namespace w3resource
 
             //conStatements.Exercise1();
             //conStatements.Exercise7();
-            conStatements.Exercise8();
+            //conStatements.Exercise8();
+
+            functions.Exercise6();
+            functions.Exercise7();
         }
     }
 }
