@@ -36,7 +36,9 @@ namespace w3resource
             //recursion.Exercise1();
             //recursion.Exercise10();
 
-            dataTypes.Exercise1();
+            //dataTypes.Exercise1();
+            dataTypes.Exercise3();
+
         }
     }
 }

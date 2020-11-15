@@ -24,7 +24,35 @@ namespace w3resource
 
         public void Exercise3()
         {
-
+            Console.WriteLine("Write a C# Sharp program that takes userid and password as input (type string). After 3 wrong attempts, user will be rejected. ");
+            Console.Write("You UserID : ");
+            string id = Console.ReadLine();
+            Console.Write("Your Password : ");
+            string password = Console.ReadLine();
+            Console.WriteLine("Let's try to Log you In");
+            int tries = 0;
+            while(tries < 3)
+            {
+                Console.Write("UserID : ");
+                string logInId = Console.ReadLine();
+                Console.Write("Password : ");
+                string logInPassword = Console.ReadLine();
+                if (logInId == id && logInPassword == password)
+                {
+                    Console.WriteLine("Nice!");
+                    break;
+                }
+                else
+                {
+                    tries++;
+                    Console.WriteLine("Something is wrong");
+                    Console.WriteLine($"You can try {3 - tries} more times");
+                }
+            }
+            if(tries == 3)
+            {
+                Console.WriteLine("end");
+            }
         }
 
         public void Exercise9()
