@@ -15,17 +15,22 @@ namespace w3resource
 
         public static int PrintNaturalNumebers(int n, int start)
         {   
-            if(n < start)
-            {
-                return n;
-            }
+            if(n < start) return n;
             Console.Write($"{start} ");
             return PrintNaturalNumebers(n, start + 1);
         }
 
         public void Exercise10()
         {
+            Console.WriteLine("Write a program in C# to find the Fibonacci numbers for a n numbers of series using recursion.");
+            int input = Convert.ToInt32(Console.ReadLine());
+            Fibonacci(0, 1, 1, input);
+        }
 
+        public static void Fibonacci(int a, int b, int counter, int number)
+        {
+            Console.Write($"{a} ");
+            if(counter < number) Fibonacci(b, b+a, counter + 1, number);
         }
 
         public void Exercise13()

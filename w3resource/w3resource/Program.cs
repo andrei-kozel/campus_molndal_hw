@@ -32,7 +32,8 @@ namespace w3resource
             //functions.Exercise6();
             //functions.Exercise7();
 
-            recursion.Exercise1();
+            //recursion.Exercise1();
+            recursion.Exercise10();
         }
     }
 }
