@@ -11,6 +11,7 @@ namespace w3resource
             ConditionalStatement conStatements = new ConditionalStatement();
             Functions functions = new Functions();
             Recursion recursion = new Recursion();
+            DataTypes dataTypes = new DataTypes();
 
             //basic.Exercise1();
             //basic.Exercise4();
@@ -33,7 +34,9 @@ namespace w3resource
             //functions.Exercise7();
 
             //recursion.Exercise1();
-            recursion.Exercise10();
+            //recursion.Exercise10();
+
+            dataTypes.Exercise1();
         }
     }
 }
