@@ -22,7 +22,7 @@ namespace ÖvningsuppgifterDel5
 
             TriangleNumber(10);
             TriangleNumber(15);
-            TriangleNumber(11);
+            TriangleNumber(28);
 
         }
 
@@ -112,38 +112,27 @@ namespace ÖvningsuppgifterDel5
 
         private static void TriangleNumber(int n)
         {
-            if (IsTriangel(n))
-                PrintStair(n);
-            else
-                Console.WriteLine($"{n} is not a triangel number.");
+            if (IsTriangel(n)) PrintStair(n);
+            else Console.WriteLine($"{n} is not a triangel number.");
         }
-
         private static bool IsTriangel(int n)
         {
             return Math.Sqrt(1 + 8 * n) % 1 == 0;
         }
-
         private static void PrintStair(int n)
         {
             int sideLength = Convert.ToInt32((Math.Sqrt(1 + 8 * n) - 1) / 2);
             List<int> list = new List<int>();
 
+            for (int i = 1; i <= sideLength; i++) list.Add(i);
             for (int i = 1; i <= sideLength; i++)
             {
-                list.Add(i);
-            }
-
-            for (int row = 1; row <= sideLength; row++)
-            {
-                for (int space = 0; space < sideLength - row; space++)
+                for (int s = 0; s < sideLength - i; s++) Console.Write("   ");
+                for (int k = 0; k < i; k++)
                 {
-                    Console.Write("  ");
-                }
-                for (int num = 0; num < row; num++)
-                {
-                    int sum = 0;
-                    sum = list.GetRange(num, sideLength - row + 1).Sum();
-                    Console.Write($"{sum} ");
+                    int sum = list.GetRange(k, sideLength - i + 1).Sum();
+                    if (sum >= 10) Console.Write($"{sum} ");
+                    else Console.Write($"{sum}  ");
                 }
                 Console.WriteLine();
             }
