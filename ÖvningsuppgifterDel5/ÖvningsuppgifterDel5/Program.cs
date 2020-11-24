@@ -113,7 +113,7 @@ namespace ÖvningsuppgifterDel5
         private static void TriangleNumber(int n)
         {
             if (IsTriangel(n))
-                PrintTrap(n);
+                PrintStair(n);
             else
                 Console.WriteLine($"{n} is not a triangel number.");
         }
@@ -123,7 +123,7 @@ namespace ÖvningsuppgifterDel5
             return Math.Sqrt(1 + 8 * n) % 1 == 0;
         }
 
-        private static void PrintTrap(int n)
+        private static void PrintStair(int n)
         {
             int sideLength = Convert.ToInt32((Math.Sqrt(1 + 8 * n) - 1) / 2);
             List<int> list = new List<int>();
