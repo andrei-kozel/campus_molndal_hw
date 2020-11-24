@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ÖvningsuppgifterDel5
 {
@@ -17,8 +19,11 @@ namespace ÖvningsuppgifterDel5
             //int result = Hexagontal(2);
             //Console.WriteLine(result);
 
-            TriangleNumber(3);
+
             TriangleNumber(10);
+            TriangleNumber(15);
+            TriangleNumber(11);
+
         }
 
         /*
@@ -107,46 +112,41 @@ namespace ÖvningsuppgifterDel5
 
         private static void TriangleNumber(int n)
         {
-            IsNumberTriangel(n);
+            if (IsTriangel(n))
+                PrintTrap(n);
+            else
+                Console.WriteLine($"{n} is not a triangel number.");
         }
 
-        private static void IsNumberTriangel(int n)
+        private static bool IsTriangel(int n)
         {
-            int sum = 0;
-            int steps = 0;
-            for (int i = 0; i < n; i++)
+            return Math.Sqrt(1 + 8 * n) % 1 == 0;
+        }
+
+        private static void PrintTrap(int n)
+        {
+            int sideLength = Convert.ToInt32((Math.Sqrt(1 + 8 * n) - 1) / 2);
+            List<int> list = new List<int>();
+
+            for (int i = 1; i <= sideLength; i++)
             {
-                sum = sum + i;
-                steps++;
-                if (sum == n)
-                {
-                    PrintTrapForm(steps, n);
-                };
+                list.Add(i);
             }
-        }
 
-
-        private static void PrintTrapForm(int steps, int n)
-
-        {
-            int numbers = n;
-            for (int i = 1; i <= steps; i++)
+            for (int row = 1; row <= sideLength; row++)
             {
-                if (numbers > 1)
+                for (int space = 0; space < sideLength - row; space++)
                 {
-                    for (int j = 1; j < steps - i; j++)
-                    {
-                        Console.Write("  ");
-                    }
-                    for (int k = 1; k <= i; k++)
-                    {
-                        Console.Write($"{numbers--} ");
-                    }
-                    Console.WriteLine();
-
+                    Console.Write("  ");
                 }
+                for (int num = 0; num < row; num++)
+                {
+                    int sum = 0;
+                    sum = list.GetRange(num, sideLength - row + 1).Sum();
+                    Console.Write($"{sum} ");
+                }
+                Console.WriteLine();
             }
-
         }
     }
 }
